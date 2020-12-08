@@ -1,0 +1,74 @@
+
+
+:root {
+    --saveSlotWidthHeight: 2cm;
+}
+
+body *{
+    margin: 0px;
+    padding: 0px;
+    position: relative; 
+}
+
+#group-saveslots {
+    display: flex;
+    width: 100%;
+    /* background-color: lightcoral;     */
+    position: relative;
+    overflow-x: auto;
+}
+
+#group-saveslots * {
+    position: relative;
+}
+
+#div-saveslots {
+    display: inline-flex;
+    background-color: cyan;
+    width: 100%;
+}
+
+#div-saveslots div {
+    position: relative;
+}
+
+#div-saveslots canvas, #butt-add-saveslot {
+    margin: 0px;
+    background-color: lightgreen;
+    width: var(--saveSlotWidthHeight);
+    height: var(--saveSlotWidthHeight);
+}
+
+#butt-add-saveslot {
+    min-height: var(--saveSlotWidthHeight);
+    min-width: var(--saveSlotWidthHeight);
+    position: relative;
+}
+
+.canvasSaveSlot:hover {
+    background-color: red !important;
+}
+
+.canvasSaveSlot:hover~.divCanvasDropDown, .divCanvasDropDown *{
+    display: block;
+    position: absolute;
+    top: -10%;
+}
+
+.divCanvasDropDown {
+    display: none;
+    z-index: 100;
+    position: fixed;
+    background-color: gray;
+}
+/* 
+.canvasOption {
+    position: relative;
+    background-color: lightgray;
+}
+
+.canvasOption:hover {
+    background-color: white;
+    border: 1px solid black;
+
+} */
